@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" type="text/javascript">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="/media/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+ 
+<body style="margin: 0;padding: 0;">
+{% verbatim %}
+<div id="app">
+    <div class="myself">
+        <div style="height:1px;"></div>
+        
+        <div style="margin-top: 100px;" >
+            <el-row type="flex" justify="space-around" v-for="pages in pageUrls">
+                <el-col :span="8" v-for="item in pages" style="padding:0 2% 0 2%;">
+                    <div style="padding:5px;margin:5px;cursor:pointer;" @click="gopath(item.path)">
+                        <img :src="item.img" style="width:-webkit-calc(100% - 20px);border: 1px solid #040472;padding:10px;" :href="item.path"/>
+                        <el-link type="primary" :href="item.path" style="padding:5px;font-size:30px;font-weight:600;" >{{item.name}}</el-link>
+                    </div>
+                </el-col>
+            </el-row>
+        </div>
+
+        <div class='desc-box'>
+            <div class='desc'>
+            <span>脉蜂进销存系统 - Powered By : </span><a style="color:red;font-weight:600;" href="https://www.eatqionline.top/" target="_blank">EatqiOnline</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endverbatim %}
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            pageUrls: {{ page_urls|safe }}
+        },
+        methods: {
+            gopath(path){
+                
+                window.location.href=path;
+            }
+        }
+    })
+</script>
+<style>
+.myself {
+    /* margin: 0;
+    padding: 0; */
+    background-color: rgb(241, 241, 241);
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+}
+.el-form-item{
+line-height: 20px !important;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.el-form-item__label{
+line-height: 20px !important;
+}
+.el-form-item__content{
+line-height: 20px !important;
+}
+.title-style {
+  font-size: 20px;
+  font-weight: 600;
+  color: #02312f;
+}
+.el-card {
+    margin-bottom: 10px;
+}
+.item {
+margin-bottom: 15px;
+}
+.el-divider {
+    margin: 0px !important;
+}
+.desc-box {
+    width:100%;
+    height: 50px;
+    line-height: 48px;
+    background-color: #02312f;
+    color:rgb(241, 241, 241);
+    position:absolute;
+    bottom:0px;
+    left:50%;
+    -webkit-transform: translate(-50%,0%);
+    -moz-transform: translate(-50%,0%);
+    transform:translate(-50%,0%);
+}
+.desc {
+    margin:auto;
+}
+</style>
+</html>
