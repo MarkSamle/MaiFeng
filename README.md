@@ -89,7 +89,7 @@
 ### Flutter页面展示
 <div style="display:flex;justify-content:center;align-items:center;">
 <img src="./images/flutter_app_page1.png" width="24%" title="工作台">
-<img src="./images/flutter_app_page3.png" width="24%" title="个人主页">
+<img src="./images/flutter_app_page2.png" width="24%" title="个人主页">
 <img src="./images/flutter_app_page4.png" width="24%" title="商品列表">
 <img src="./images/flutter_app_page5.png" width="24%" title="色码列表">
 </div>

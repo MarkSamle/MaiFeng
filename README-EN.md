@@ -99,7 +99,7 @@ Maifeng is a commodity inventory control ERP system that uses Python language Dj
 ### Flutter页面展示
 <div style="display:flex;justify-content:center;align-items:center;">
 <img src="./images/flutter_app_page1.png" width="24%" title="work table">
-<img src="./images/flutter_app_page3.png" width="24%" title="user self">
+<img src="./images/flutter_app_page2.png" width="24%" title="user self">
 <img src="./images/flutter_app_page4.png" width="24%" title="ware list">
 <img src="./images/flutter_app_page5.png" width="24%" title="sku list">
 </div>
